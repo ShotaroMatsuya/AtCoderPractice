@@ -1,0 +1,7 @@
+{
+  "name": "AtcoderWorkspace",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "extensions": ["ms-python.python", "ms-python.black-formatter"],
+  "service": "atcoder",
+  "workspaceFolder": "/code"
+}
