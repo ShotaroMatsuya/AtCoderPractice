@@ -30,6 +30,15 @@
       "cwd": "${fileDirname}",
       "console": "integratedTerminal",
       "args": ["<", "test/sample-3.in"]
+    },
+    {
+      "name": "Python: AtCoder Test4",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "cwd": "${fileDirname}",
+      "console": "integratedTerminal",
+      "args": ["<", "test/sample-4.in"]
     }
   ]
 }
