@@ -8,7 +8,7 @@ while isValid:
         if A[i] % 2 == 0:
             if i == len(A) - 1:
                 result += 1
-                A = list(map(lambda val: val / 2, A))
+                A = [x / 2 for x in A]
             continue
         else:
             isValid = False
