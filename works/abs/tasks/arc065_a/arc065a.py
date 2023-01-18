@@ -1,27 +1,15 @@
 S = str(input())
 
+results = [False] * (len(S) + 1)
+results[0] = True
+for i in range(len(S) + 1):
+    if i >= 5 and results[i - 5] and S[i - 5 : i] == "dream":
+        results[i] = True
+    if i >= 7 and results[i - 7] and S[i - 7 : i] == "dreamer":
+        results[i] = True
+    if i >= 5 and results[i - 5] and S[i - 5 : i] == "erase":
+        results[i] = True
+    if i >= 6 and results[i - 6] and S[i - 6 : i] == "eraser":
+        results[i] = True
 
-def recursive(S):
-    a = False
-    b = False
-    c = False
-    d = False
-    if S == "":
-        return True
-    if S[0:5] == "dream":
-        a = recursive(S[5:])
-        if S[0:7] == "dreamer":
-            b = recursive(S[7:])
-
-    if S[0:5] == "erase":
-        c = recursive(S[5:])
-        if S[0:6] == "eraser":
-            d = recursive(S[6:])
-
-    return a or b or c or d
-
-
-if recursive(S):
-    print("YES")
-else:
-    print("NO")
+print("YES" if results[len(S)] else "NO")
